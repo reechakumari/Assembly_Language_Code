@@ -1,0 +1,11 @@
+    	MVI C, 00
+  	  LDA 1000
+    	MOV B, A
+    	LDA 1001
+  	  ADD B
+	    JNC LOOP
+    	INR C
+LOOP:	STA 2000
+	    MOV A, C
+    	STA 2001
+	    HLT
