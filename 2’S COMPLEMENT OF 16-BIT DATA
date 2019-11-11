@@ -1,0 +1,10 @@
+	LHLD 1000
+	MOV A, L
+	CMA
+	MOV L, A
+	MOV A, H
+	CMA
+	MOV H, A
+	INX H
+	SHLD 2000
+	HLT
