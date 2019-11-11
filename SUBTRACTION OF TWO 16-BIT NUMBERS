@@ -1,0 +1,23 @@
+    	MVI C, 00
+    	LHLD 1000
+    	XCHG
+    	LHLD 1002
+    	MOV A, E
+    	SUB L
+    	MOV L, A
+    	MOV A, D
+    	SBB H
+	    MOV H, A
+    	JNC LOOP
+    	INR C
+    	MOV A, L
+    	CMA
+    	MOV L, A
+    	MOV A, H
+    	CMA
+    	MOV H, A
+    	INX H
+LOOP:	SHLD 2000
+    	MOV A, C
+    	STA 2002
+	    HLT
