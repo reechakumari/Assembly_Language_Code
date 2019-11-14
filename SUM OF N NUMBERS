@@ -1,0 +1,14 @@
+    	LXI H, 1000
+    	MOV B,M
+    	MVI A,00
+	    MVI C,00
+LOOP:	INX H
+	    ADD M
+	    JNC NEXT
+	    INR C
+NEXT:	DCR B
+	    JNZ LOOP
+	    STA 2000
+	    MOV A,C
+	    STA 2001
+	    HLT
