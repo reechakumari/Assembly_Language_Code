@@ -1,0 +1,8 @@
+	    LDA 1000
+	    MOV B, A
+	    LDA 1001
+	    CMP B
+	    JNC NEXT
+	    MOV A, B
+NEXT:	STA 2000
+	    HLT
