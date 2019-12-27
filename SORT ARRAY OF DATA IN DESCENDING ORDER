@@ -1,0 +1,19 @@
+    	  LDA 1000
+	      MOV C, A
+      	DCR C
+REPEAT:	MOV D, C
+    	LXI H, 1001
+LOOP:	MOV A, M
+      INX H
+	    CMP M
+	    JNC NEXT
+	    MOV B, M
+	    MOV M, A
+	    DCX H
+	    MOV M, B
+	    INX H
+NEXT:	DCR D
+    	JNZ LOOP
+    	DCR C
+	    JNZ REPEAT
+    	HLT
