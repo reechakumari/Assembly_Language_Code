@@ -1,0 +1,11 @@
+    	LDA 1000
+	    MOV C, A
+    	LXI H, 1001
+	    LXI D, 2001
+LOOP:	MOV A, M
+	    STAX D
+	    INX H
+	    INX D
+	    DCR C
+	    JNZ LOOP
+	    HLT
