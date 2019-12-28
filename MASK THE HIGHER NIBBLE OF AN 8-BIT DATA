@@ -1,0 +1,4 @@
+	LDA 1000
+	ANI 0F
+	STA 2000
+	HLT
