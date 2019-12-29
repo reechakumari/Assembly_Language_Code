@@ -1,0 +1,24 @@
+    	MVI E, 00
+  	  MOV D, E
+    	LDA 1000
+HUND:	CPI 64
+	    JC TEN
+	    SUI 64
+    	INR E
+    	JMP HUND
+TEN:	CPI 0A
+    	JC UNIT
+    	SUI 0A
+	    INR D
+    	JMP TEN
+UNIT:	MOV C, A
+    	MOV A, D
+    	RLC
+    	RLC
+    	RLC
+    	RLC
+	    ADD C
+    	STA 2000
+    	MOV A, E
+    	STA 2001
+    	HLT
