@@ -1,0 +1,22 @@
+    	LDA 1000
+	    CPI 02
+    	JC NEXT
+    	MOV E, A
+    	MVI D, 00
+    	DCR A
+    	MOV C, A
+    	CALL FACT
+    	XCHG
+    	JMP LAST
+NEXT:	LXI H, 0001
+LAST:	SHLD 2000
+     	HLT
+FACT:	LXI H, 0000          //SUBROUTINE FACT CALL HERE
+    	MOV B, C
+LOOP:	DAD D
+	    DCR B
+	    JNZ LOOP
+	    XCHG
+	    DCR C
+	    CNZ FACT
+    	RET
